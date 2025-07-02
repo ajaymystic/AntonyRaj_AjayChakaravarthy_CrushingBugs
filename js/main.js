@@ -39,6 +39,16 @@ this.classList.remove("drag-over");
    
 
 //  Matching the correct labels 
+ const labelText = currentDraggedElement.textContent.trim().toLowerCase();
+    const targetId = this.id.toLowerCase();
+
+    if (labelText === targetId) {
+        this.classList.add("correct-drop");
+    } else {
+        this.classList.add("wrong-drop");
+    }
+    currentDraggedElement = null;
+}
 
 
 //Reset Btn 
@@ -54,8 +64,8 @@ labels.forEach(label => {
 
 targetZones.forEach(target => {
     target.addEventListener("dragover", dragOver);
- 
+    target.addEventListener("dragenter", dragEnter);
+    target.addEventListener("dragleave", dragLeave);
     target.addEventListener("drop", drop);
 });
 
-}

@@ -57,7 +57,7 @@ function resetGame() {
             const label = zone.firstElementChild;
             labelBox.appendChild(label);
         }
-        zone.classList.remove("correct-drop", "wrong-drop", "drag-over"); // clear all feedback
+        zone.classList.remove("correct-drop", "wrong-drop", "drag-over"); 
     })
 
     targetZones.forEach(zone => {
@@ -82,3 +82,4 @@ targetZones.forEach(target => {
 });
 
 resetBtn.addEventListener("click", resetGame);
+

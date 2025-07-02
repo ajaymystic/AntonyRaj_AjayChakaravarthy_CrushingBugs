@@ -81,8 +81,4 @@ targetZones.forEach(target => {
     target.addEventListener("drop", drop);
 });
 
-<<<<<<< Updated upstream
 resetBtn.addEventListener("click", resetGame);
-=======
-resetBtn.addEventListener("click", resetGame);
->>>>>>> Stashed changes

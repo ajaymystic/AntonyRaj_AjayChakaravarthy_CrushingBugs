@@ -29,8 +29,13 @@ function dragLeave(event) {
 
 function drop(event) {
     event.preventDefault();
-
+  
 //Double drop logic
+this.classList.remove("drag-over");
+
+    if (this.children.length > 0) return;
+
+    this.appendChild(currentDraggedElement);
    
 
 //  Matching the correct labels 

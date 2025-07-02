@@ -52,6 +52,13 @@ function drop(event) {
 //Reset Btn 
 function resetGame() {
     console.log("Reset Game called");
+        targetZones.forEach(zone => {
+        if (zone.children.length > 0) {
+            const label = zone.firstElementChild;
+            labelBox.appendChild(label);
+        }
+        zone.classList.remove("correct-drop", "wrong-drop", "drag-over"); // clear all feedback
+    })
 
     targetZones.forEach(zone => {
         if (zone.children.length > 0) {
@@ -74,4 +81,8 @@ targetZones.forEach(target => {
     target.addEventListener("drop", drop);
 });
 
+<<<<<<< Updated upstream
 resetBtn.addEventListener("click", resetGame);
+=======
+resetBtn.addEventListener("click", resetGame);
+>>>>>>> Stashed changes
